@@ -7,21 +7,19 @@
 	</head>
 
 	<body>
-        <!-- <div style="position:absolute; left:100px; width:500px;">
-        <h1 id="hello" style="position: absolute; top:5px; left:5px; color:red; opacity:0.3">Hello world!</h1>
-        <!-- <h1 id="goodbye" style="position: absolute; top:5px; left:5px; color:red;">Goodbye!</h1> 
-        </div> -->
         
         <div id="container" style="position:absolute; left:100px; width:500px;">
-            <h1 id="hello" style="position: absolute; top:5px; left:5px; color:red; opacity:1">Hello world!</h1>
-            <h1 id="goodbye" style="position: absolute; top:5px; left:5px; color:red; opacity:0">Goodbye!</h1>
-            <h1 id="ahoy" style="position: absolute; top:5px; left:5px; color:red; opacity:0">Farewell!</h1>
+            <h1 id="hello" style="color:red;">Hello world!</h1>
+            <h1 id="goodbye" style="color:red;">Goodbye!</h1>
+            <h1 id="ahoy" style="color:red;">Farewell!</h1>
         </div>
         
         <script src="faderLib.js"></script>
         <script>
-            var fader = new fadeLib.Fader({container: "container", fadeSpeed: 5000, pauseLength: 5000});
-            fader.start();
+            window.addEventListener("load", function() {
+                var fader = new fadeLib.Fader({container: "container", fadeLength: 5000, pauseLength: 5000});
+                fader.start();
+            });
         </script>
 	</body>
 
